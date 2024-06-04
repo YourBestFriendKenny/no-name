@@ -1,31 +1,24 @@
-import { View, Text, StyleSheet,Button } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 
-import FeedScreen from "./FeedScreen";
 
-const HomeScreen = () => {
+const ChatScreen = () => {
     return(
         <View style={styles.container}>
-
-            <FeedScreen />
-
-
-
+            <Text style={styles.text}>Chat</Text>
         </View>
 
     );
 };
 
 
-export default HomeScreen;
+export default ChatScreen ;
 
 
 const styles = StyleSheet.create({
-
     container:{
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        
     },
     text:{
         fontSize:24,
