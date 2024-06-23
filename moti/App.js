@@ -34,7 +34,8 @@ import ChatScreen from './screens/ChatScreen';
 
 
 
-/* tabBarBadge:3 - задает круг нужен для уведомлений */
+
+/* tabBarBadge:3 - задает круг для уведомлений */
 /* headerShown: false, - убирает заголовок название вкладки */
 
 
@@ -47,20 +48,25 @@ export default function App() {
 
   return (
       <View style={styles.container}>
+
+       <StatusBar style="auto" />
        
-        
+
+       
+
         <NavigationContainer >
-          <Tab.Navigator screenOptions={{ backgroundColor: "" ,headerShown: false, tabBarStyle:{position:"absolute"}, tabBarShowLabel: false, tabBarBackground: () => (<BlurView tint="light" intensity={20} style={StyleSheet.absoluteFill} />) }}>
+          <Tab.Navigator screenOptions={{headerShown: false, tabBarStyle:{position:"absolute"}, tabBarShowLabel: false, tabBarBackground: () => (<BlurView tint="light" intensity={20} style={StyleSheet.absoluteFill} />) }}>
             <Tab.Screen name="Home" component={HomeScreen} options={{tabBarIcon: ({ color }) =><Ionicons name="home" size={20} color={color}/>,}}/>
             <Tab.Screen name="addmovie" component={AddMovie} options={{tabBarIcon: ({ color }) =><Ionicons size={20}><Entypo name="circle-with-plus" size={20} color={color} /></Ionicons>}}/>
             <Tab.Screen name="Chat" component={ChatScreen} options={{tabBarIcon: ({ color }) =><Ionicons size={20}><Entypo name="chat" size={24} color={color} /></Ionicons>, tabBarBadge:3 }}/>
             <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon: ({ color }) =><Ionicons name="person" color={color} size={20}/>}}/>
           </Tab.Navigator>
         </NavigationContainer>
-
+        
+        
         
 
-
+        
 
 
 
@@ -73,6 +79,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  
   navigation:{
     backgroundColor: '#000',
   },

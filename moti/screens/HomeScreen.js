@@ -1,12 +1,20 @@
-import { View, Text, StyleSheet,Button } from "react-native";
+import { View, Text, StyleSheet, Button, Image} from "react-native";
 
 import FeedScreen from "./FeedScreen";
 
+
+
+
 const HomeScreen = () => {
     return(
-        <View style={styles.container}>
-
+        <View style={styles.container}>          
+            
             <FeedScreen />
+
+            
+        
+
+            
 
 
 
